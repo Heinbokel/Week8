@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Tells .NET to add our DBContext to our scope
 builder.Services.AddScoped<Week8DbContext>();
 
 var app = builder.Build();
