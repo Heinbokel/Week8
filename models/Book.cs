@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Week8.models {
 
@@ -22,6 +23,8 @@ namespace Week8.models {
         // Navigation Properties to tell EF what relationships exist
         // between the book and these other entities.
         public List<Author> Authors { get; set; }
+
+        [JsonIgnore]
         public List<Genre> Genres { get; set; }
         public List<BookImage> BookImages { get; set; }
     }
